@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>WEEK 10 HOMEWORK</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.18.2"></script>
+  <style media="screen">
+    /* Add space between Vega-Embed links  */
+    .vega-actions a {
+      margin-right: 5px;
+    }
+  </style>
+  <style>
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+    .row.content {height: 840px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height: auto;}
+    }
+
+    .grapharea{
+      width: auto;
+      align-content: center;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <h1 style="font-weight: bold;">Tokyo 2020 Olypmics</h1>
+      <hr>
+      <hr>
+      <hr>
+      <h2>How well did G20 countries performed?</h2>
+      <hr>
+      <div class="grapharea"><div id="vis2"></div></div>
+
+    </div>
+
+    <div class="col-sm-9">
+      <h4 style="text-align: right;"><small>FIT3179 - DATA VISUALISATION. WEEK 10 HOMEWORK</small></h4>
+      <hr>
+      <h2 style="text-align: center;">Number of Medals Won (By Country)</h2>
+      <div id="vis">
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="container-fluid">
+  <p>Visualization Created by Andrew Pang, all rights reserved.</p>
+  <p>Dataset by Arjun Prasad Sarkhel: https://www.kaggle.com/arjunprasadsarkhel/2021-olympics-in-tokyo</p>
+</footer>
+<script>
+  // Assign the specification to a local variable vlSpec.
+
+  var spec1 = "https://raw.githubusercontent.com/SkyGlider/3179wk9/main/vis_spec.json";
+  // Embed the visualization in the container with id `vis`
+  vegaEmbed('#vis', spec1);
+
+  var spec2 = "https://raw.githubusercontent.com/SkyGlider/3179wk9/main/vis_spec2.json";
+  // Embed the visualization in the container with id `vis`
+  vegaEmbed('#vis2', spec2);
+
+</script>
+</body>
+</html>
