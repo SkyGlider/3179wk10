@@ -2,7 +2,7 @@
 This is a Data Visualization showing the participants of the 2020 Tokyo Olympics.
 
 ## View 
-View the visualisation at https://skyglider.github.io/3179wk10/](https://skyglider.github.io/tokyo-olympics-dataviz/
+View the visualisation at https://skyglider.github.io/tokyo-olympics-dataviz/
 
 ## Contributing
 
